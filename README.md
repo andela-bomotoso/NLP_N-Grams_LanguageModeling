@@ -13,9 +13,14 @@ The processing steps are;
 * Each line in the file is considered a sentence. N-grams are extracted at the line/sentence level,
 and do not crossover line boundaries. Note: in the unlikely event that some lines contain more than
 one sentence, they are handled as a single sentence in this project.
-* The data structure used to hold the tokens/words in each sentence should be augmented with the
+* The data structure used to hold the tokens/words in each sentence are augmented with the
 special start sentence <s> and end sentence </s> symbols, as required for each n-gram.
-* The extracted unigrams, bigrams, and trigrams should be kept in separate data structures (dictionaries
+* The extracted unigrams, bigrams, and trigrams are kept in separate data structures (dictionaries
 indexed by tuples work well for this).
-* Once the n-grams have been extracted, the test file will be read for testing. The last element of each
+* Once the n-grams have been extracted, the test file is read for testing. The last element of each
 line (an integer) is the index of the token to be predicted. The context is taken from the sentence:
+
+Example sentence: _***My car is painted dark blue***_ . 5 - Since the (zero based) index for the target word is
+5, the word being predicted is blue (shown underlined). The highest probabilities (frequency of
+occurrence) bigrams where the first word is dark, and trigrams where the first two words are painted
+dark are assessed.
