@@ -20,15 +20,14 @@ indexed by tuples work well for this).
 * Once the n-grams have been extracted, the test file is read for testing. The last element of each
 line (an integer) is the index of the token to be predicted. The context is taken from the sentence:
 
-Example sentence: _***My car is painted dark <ins>blue</ins>***_ . 5 - Since the (zero based) index for the target word is
-5, the word being predicted is blue (shown underlined). The highest probabilities (frequency of
-occurrence) bigrams where the first word is dark, and trigrams where the first two words are painted
-dark are assessed.
+Example sentence: _***My car is painted light <ins>brown</ins>***_ . 5 - Since the (zero based) index for the target word is
+5, the word being predicted is brown (shown underlined). The highest probabilities (frequency of
+occurrence) bigrams where the first word is light, and trigrams where the first two words are painted
+light are assessed.
 
 ### Output
 The program displays the following output;
 * The number of unique unigrams, bigrams, and trigrams extracted
 * The number of correct predictions found within the top 1, 3, 5, and 10 bigrams and/or trigrams with the
 highest probabilities. The prediction is considered correct when either the bigram or trigram having the
-correct conditional context is followed by the word being predicted. See example output below:
-![Output](output.PNG)
+correct conditional context is followed by the word being predicted. 
